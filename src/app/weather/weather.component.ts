@@ -12,4 +12,8 @@ export class WeatherComponent implements OnInit {
   ngOnInit() {
   }
 
+  handleSearch(location) {
+    console.log(location);
+  }
+
 }

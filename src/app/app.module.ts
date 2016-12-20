@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { WeatherComponent } from './weather/weather.component';
+import { WeatherFormComponent } from './weather-form/weather-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    WeatherComponent
+    WeatherComponent,
+    WeatherFormComponent
   ],
   imports: [
     BrowserModule,
