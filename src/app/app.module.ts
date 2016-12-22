@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { WeatherComponent } from './weather/weather.component';
 import { WeatherFormComponent } from './weather-form/weather-form.component';
+import { ErrorModalComponent } from './error-modal/error-modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     WeatherComponent,
-    WeatherFormComponent
+    WeatherFormComponent,
+    ErrorModalComponent
   ],
   imports: [
     BrowserModule,

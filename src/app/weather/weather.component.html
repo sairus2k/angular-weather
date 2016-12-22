@@ -1,4 +1,4 @@
 <h1 class="text-center page-title">Get Weather</h1>
 <aw-weather-form (onSearch)="handleSearch($event)"></aw-weather-form>
 <h3 class="text-center">Fetching weather...</h3>
-<div>Error massage</div>
+<aw-error-modal *ngIf="errorMessage" [errorMessage]="errorMessage"></aw-error-modal>
