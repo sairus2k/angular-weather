@@ -8,6 +8,7 @@ import { NavComponent } from './nav/nav.component';
 import { WeatherComponent } from './weather/weather.component';
 import { WeatherFormComponent } from './weather-form/weather-form.component';
 import { ErrorModalComponent } from './error-modal/error-modal.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ErrorModalComponent } from './error-modal/error-modal.component';
     NavComponent,
     WeatherComponent,
     WeatherFormComponent,
-    ErrorModalComponent
+    ErrorModalComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

@@ -6,9 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./weather.component.scss']
 })
 export class WeatherComponent implements OnInit {
-  errorMessage:any = null;
+  errorMessage: any = null;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
