@@ -10,10 +10,12 @@ import { WeatherComponent } from './weather/weather.component';
 import { WeatherFormComponent } from './weather-form/weather-form.component';
 import { ErrorModalComponent } from './error-modal/error-modal.component';
 import { AboutComponent } from './about/about.component';
+import { ExamplesComponent } from './examples/examples.component';
 
 const appRoutes: Routes = [
   {path: '', component: WeatherComponent},
-  {path: 'about', component: AboutComponent}
+  {path: 'about', component: AboutComponent},
+  {path: 'examples', component: ExamplesComponent}
 ];
 
 @NgModule({
@@ -23,7 +25,8 @@ const appRoutes: Routes = [
     WeatherComponent,
     WeatherFormComponent,
     ErrorModalComponent,
-    AboutComponent
+    AboutComponent,
+    ExamplesComponent
   ],
   imports: [
     BrowserModule,
