@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WeatherComponent implements OnInit {
   errorMessage: any = null;
+  isLoading: boolean = false;
+  location: string = '';
+  temp: number = 0;
 
   constructor() {
   }

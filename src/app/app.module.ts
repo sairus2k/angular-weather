@@ -11,6 +11,7 @@ import { WeatherFormComponent } from './weather-form/weather-form.component';
 import { ErrorModalComponent } from './error-modal/error-modal.component';
 import { AboutComponent } from './about/about.component';
 import { ExamplesComponent } from './examples/examples.component';
+import { WeatherMessageComponent } from './weather-message/weather-message.component';
 
 const appRoutes: Routes = [
   {path: '', component: WeatherComponent},
@@ -26,7 +27,8 @@ const appRoutes: Routes = [
     WeatherFormComponent,
     ErrorModalComponent,
     AboutComponent,
-    ExamplesComponent
+    ExamplesComponent,
+    WeatherMessageComponent
   ],
   imports: [
     BrowserModule,
