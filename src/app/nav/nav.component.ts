@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'aw-nav',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
+  location: string = '';
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  onSearch() {
+    const location = this.location;
+    if (location && location.length > 0) {
+      this.router.navigate(['/'], {queryParams: {location}})
+        .then(() => {
+          this.location = '';
+        });
+    }
+  }
 }
