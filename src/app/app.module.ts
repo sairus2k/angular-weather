@@ -12,6 +12,7 @@ import { ErrorModalComponent } from './error-modal/error-modal.component';
 import { AboutComponent } from './about/about.component';
 import { ExamplesComponent } from './examples/examples.component';
 import { WeatherMessageComponent } from './weather-message/weather-message.component';
+import { OpenWeatherMapService } from './open-weather-map.service';
 
 const appRoutes: Routes = [
   {path: '', component: WeatherComponent},
@@ -36,7 +37,9 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    OpenWeatherMapService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

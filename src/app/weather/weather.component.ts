@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OpenWeatherMapService } from '../open-weather-map.service';
 
 @Component({
   selector: 'aw-weather',
@@ -11,14 +12,25 @@ export class WeatherComponent implements OnInit {
   location: string = '';
   temp: number = 0;
 
-  constructor() {
+  constructor(private openWeatherMapService: OpenWeatherMapService) {
   }
 
   ngOnInit() {
   }
 
   handleSearch(location) {
-    this.errorMessage = {title: location, message: location};
+    this.location = location;
+    this.isLoading = true;
+    this.openWeatherMapService
+      .getTemp(location)
+      .then(temp => {
+        this.temp = temp;
+        this.isLoading = false;
+      })
+      .catch(() => {
+        this.errorMessage = 'The city not found';
+        this.isLoading = false;
+      });
   }
 
 }
