@@ -5,7 +5,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class OpenWeatherMapService {
-  private OPEN_WEATHER_MAP_URL = '//api.openweathermap.org/data/2.5/weather';
+  private OPEN_WEATHER_MAP_URL = 'http://api.openweathermap.org/data/2.5/weather';
   private APP_ID = 'd5a17281219749675b7897dce29931b3';
 
   constructor(private http: Http) {
