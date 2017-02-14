@@ -4,12 +4,14 @@
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
-    "start": "ng serve",
+    "start": "http-server dist/",
     "hmr": "ng serve --hmr -e=hmr",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "preinstall": "npm i -g http-server",
+    "postinstall": "ng build --prod --aot"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +23,9 @@
     "@angular/platform-browser": "2.4.1",
     "@angular/platform-browser-dynamic": "2.4.1",
     "@angular/router": "3.4.1",
+    "@angularclass/hmr": "^1.2.2",
+    "@types/node": "^6.0.42",
+    "angular-cli": "^1.0.0-beta.24",
     "core-js": "^2.4.1",
     "rxjs": "5.0.1",
     "ts-helpers": "^1.1.1",
@@ -28,10 +33,7 @@
   },
   "devDependencies": {
     "@angular/compiler-cli": "2.4.1",
-    "@angularclass/hmr": "^1.2.2",
     "@types/jasmine": "2.5.38",
-    "@types/node": "^6.0.42",
-    "angular-cli": "^1.0.0-beta.24",
     "codelyzer": "~2.0.0-beta.1",
     "jasmine-core": "2.5.2",
     "jasmine-spec-reporter": "2.5.0",
