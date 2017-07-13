@@ -6,8 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./weather-message.component.scss']
 })
 export class WeatherMessageComponent implements OnInit {
-  @Input() location: string = '';
-  @Input() temp: string = '';
+  @Input() location = '';
+  @Input() temp = '';
 
   constructor() { }
 

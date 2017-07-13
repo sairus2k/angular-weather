@@ -11,9 +11,9 @@ import { Subscription } from 'rxjs';
 export class WeatherComponent implements OnInit, OnDestroy {
   private subscription: Subscription;
   errorMessage: any = null;
-  isLoading: boolean = false;
-  location: string = '';
-  temp: number = 0;
+  isLoading = false;
+  location = '';
+  temp = 0;
 
   constructor(private openWeatherMapService: OpenWeatherMapService,
               private activatedRoute: ActivatedRoute,
@@ -30,7 +30,7 @@ export class WeatherComponent implements OnInit, OnDestroy {
           });
         }
       }
-    )
+    );
   }
 
   ngOnDestroy() {
